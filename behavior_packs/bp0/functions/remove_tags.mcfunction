@@ -26,5 +26,5 @@ tag @a remove cp13
 tag @a remove reached_cp13
 tag @a remove finished
 tag @a remove equipped
-tag @a remove cp1
-tag @a remove reached_cp1
+tag @a remove racing
+tag @a remove creative

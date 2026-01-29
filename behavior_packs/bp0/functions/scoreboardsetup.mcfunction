@@ -8,14 +8,35 @@ scoreboard objectives add tick_sec_tens dummy
 scoreboard objectives add tick_min_tens dummy
 scoreboard objectives add tick_min_ones dummy
 
-scoreboard objectives add tick_ms_tens dummy 
-scoreboard objectives add tick_ms_ones dummy 
-scoreboard players set  @e[tag=main] tick_ms_tens 0
-scoreboard players set  @e[tag=main] tick_ms_ones 0
-scoreboard players set  @e[tag=main] tick_sec_tens 0
-scoreboard players set  @e[tag=main] tick_sec_ones 0
-scoreboard players set  @e[tag=main] tick_min_tens 0
-scoreboard players set  @e[tag=main] tick_min_ones 0
+scoreboard objectives add tick_ms_tens dummy
+scoreboard objectives add tick_ms_ones dummy
+
+## 멀티플레이어용 스코어보드
+scoreboard objectives add racing dummy racing
+scoreboard objectives add finishorder dummy "완주 순서"
+scoreboard objectives add rank dummy "순위"
+scoreboard objectives add countdown dummy countdown
+scoreboard objectives add finishcount dummy finishcount
+
+## 플레이어별 타이밍 초기화
+scoreboard players set @a tick_ms_tens 0
+scoreboard players set @a tick_ms_ones 0
+scoreboard players set @a tick_sec_tens 0
+scoreboard players set @a tick_sec_ones 0
+scoreboard players set @a tick_min_tens 0
+scoreboard players set @a tick_min_ones 0
+scoreboard players set @a racing 0
+scoreboard players set @a finishorder 0
+scoreboard players set @a rank 0
+
+## NPC 타이밍 (글로벌 타이머용)
+scoreboard players set @e[tag=main] tick_ms_tens 0
+scoreboard players set @e[tag=main] tick_ms_ones 0
+scoreboard players set @e[tag=main] tick_sec_tens 0
+scoreboard players set @e[tag=main] tick_sec_ones 0
+scoreboard players set @e[tag=main] tick_min_tens 0
+scoreboard players set @e[tag=main] tick_min_ones 0
+scoreboard players set @e[tag=main] finishcount 0
 
 scoreboard objectives add cp1 dummy cp1
 scoreboard objectives add cp2 dummy cp2
@@ -34,16 +55,21 @@ scoreboard objectives add totaltime dummy totaltime
 scoreboard players set @e[tag=main] checkpoint 0
 scoreboard players set @e[tag=main] tick_clock 0
 scoreboard players set @e[tag=main] totaltime 0
-scoreboard players set @e[tag=main] cp1 0
-scoreboard players set @e[tag=main] cp2 0
-scoreboard players set @e[tag=main] cp3 0
-scoreboard players set @e[tag=main] cp4 0
-scoreboard players set @e[tag=main] cp5 0
-scoreboard players set @e[tag=main] cp6 0
-scoreboard players set @e[tag=main] cp7 0
-scoreboard players set @e[tag=main] cp8 0
-scoreboard players set @e[tag=main] cp9 0
-scoreboard players set @e[tag=main] cp10 0
-scoreboard players set @e[tag=main] cp11 0
-scoreboard players set @e[tag=main] cp12 0
-scoreboard players set @e[tag=main] cp13 0
+scoreboard players set @a checkpoint 0
+scoreboard players set @a totaltime 0
+scoreboard players set @a cp1 0
+scoreboard players set @a cp2 0
+scoreboard players set @a cp3 0
+scoreboard players set @a cp4 0
+scoreboard players set @a cp5 0
+scoreboard players set @a cp6 0
+scoreboard players set @a cp7 0
+scoreboard players set @a cp8 0
+scoreboard players set @a cp9 0
+scoreboard players set @a cp10 0
+scoreboard players set @a cp11 0
+scoreboard players set @a cp12 0
+scoreboard players set @a cp13 0
+
+## 순위 사이드바 표시
+scoreboard objectives setdisplay sidebar rank

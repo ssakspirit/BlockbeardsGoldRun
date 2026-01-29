@@ -1,23 +1,9 @@
-event entity @e[type=cleverlike:checkpoint] e_remove
-execute @a ~~~ playsound race_checkpoint @s ~~~ 2.0
-scoreboard players operation min_tens cp10 = @e[tag=main] tick_min_tens 
-scoreboard players operation min_ones cp10 = @e[tag=main] tick_min_ones
-scoreboard players operation sec_tens cp10 = @e[tag=main] tick_sec_tens 
-scoreboard players operation sec_ones cp10 = @e[tag=main] tick_sec_ones
-scoreboard players operation ms_tens cp10 = @e[tag=main] tick_ms_tens 
-scoreboard players operation ms_ones cp10 = @e[tag=main] tick_ms_ones
-tellraw @a { "rawtext": [ { "text": "§eCP 1: §f" }, {"score":{"name":"min_tens","objective":"cp1"}},{"score":{"name":"min_ones","objective":"cp1"}},{ "text": ":"},{"score":{"name":"sec_tens","objective":"cp1"}},{"score":{"name":"sec_ones","objective":"cp1"}},{ "text": "."},{"score":{"name":"ms_tens","objective":"cp1"}},{"score":{"name":"ms_ones","objective":"cp1"}}]}
-tellraw @a { "rawtext": [ { "text": "§eCP 2: §f" }, {"score":{"name":"min_tens","objective":"cp2"}},{"score":{"name":"min_ones","objective":"cp2"}},{ "text": ":"},{"score":{"name":"sec_tens","objective":"cp2"}},{"score":{"name":"sec_ones","objective":"cp2"}},{ "text": "."},{"score":{"name":"ms_tens","objective":"cp2"}},{"score":{"name":"ms_ones","objective":"cp2"}}]}
-tellraw @a { "rawtext": [ { "text": "§eCP 3: §f" }, {"score":{"name":"min_tens","objective":"cp3"}},{"score":{"name":"min_ones","objective":"cp3"}},{ "text": ":"},{"score":{"name":"sec_tens","objective":"cp3"}},{"score":{"name":"sec_ones","objective":"cp3"}},{ "text": "."},{"score":{"name":"ms_tens","objective":"cp3"}},{"score":{"name":"ms_ones","objective":"cp3"}}]}
-tellraw @a { "rawtext": [ { "text": "§eCP 4: §f" }, {"score":{"name":"min_tens","objective":"cp4"}},{"score":{"name":"min_ones","objective":"cp4"}},{ "text": ":"},{"score":{"name":"sec_tens","objective":"cp4"}},{"score":{"name":"sec_ones","objective":"cp4"}},{ "text": "."},{"score":{"name":"ms_tens","objective":"cp4"}},{"score":{"name":"ms_ones","objective":"cp4"}}]}
-tellraw @a { "rawtext": [ { "text": "§eCP 5: §f" }, {"score":{"name":"min_tens","objective":"cp5"}},{"score":{"name":"min_ones","objective":"cp5"}},{ "text": ":"},{"score":{"name":"sec_tens","objective":"cp5"}},{"score":{"name":"sec_ones","objective":"cp5"}},{ "text": "."},{"score":{"name":"ms_tens","objective":"cp5"}},{"score":{"name":"ms_ones","objective":"cp5"}}]}
-tellraw @a { "rawtext": [ { "text": "§eCP 6: §f" }, {"score":{"name":"min_tens","objective":"cp6"}},{"score":{"name":"min_ones","objective":"cp6"}},{ "text": ":"},{"score":{"name":"sec_tens","objective":"cp6"}},{"score":{"name":"sec_ones","objective":"cp6"}},{ "text": "."},{"score":{"name":"ms_tens","objective":"cp6"}},{"score":{"name":"ms_ones","objective":"cp6"}}]}
-tellraw @a { "rawtext": [ { "text": "§eCP 7: §f" }, {"score":{"name":"min_tens","objective":"cp7"}},{"score":{"name":"min_ones","objective":"cp7"}},{ "text": ":"},{"score":{"name":"sec_tens","objective":"cp7"}},{"score":{"name":"sec_ones","objective":"cp7"}},{ "text": "."},{"score":{"name":"ms_tens","objective":"cp7"}},{"score":{"name":"ms_ones","objective":"cp7"}}]}
-tellraw @a { "rawtext": [ { "text": "§eCP 8: §f" }, {"score":{"name":"min_tens","objective":"cp8"}},{"score":{"name":"min_ones","objective":"cp8"}},{ "text": ":"},{"score":{"name":"sec_tens","objective":"cp8"}},{"score":{"name":"sec_ones","objective":"cp8"}},{ "text": "."},{"score":{"name":"ms_tens","objective":"cp8"}},{"score":{"name":"ms_ones","objective":"cp8"}}]}
-tellraw @a { "rawtext": [ { "text": "§eCP 9: §f" }, {"score":{"name":"min_tens","objective":"cp9"}},{"score":{"name":"min_ones","objective":"cp9"}},{ "text": ":"},{"score":{"name":"sec_tens","objective":"cp9"}},{"score":{"name":"sec_ones","objective":"cp9"}},{ "text": "."},{"score":{"name":"ms_tens","objective":"cp9"}},{"score":{"name":"ms_ones","objective":"cp9"}}]}
-tellraw @a { "rawtext": [ { "text": "§eCP 10: §f" }, {"score":{"name":"min_tens","objective":"cp10"}},{"score":{"name":"min_ones","objective":"cp10"}},{ "text": ":"},{"score":{"name":"sec_tens","objective":"cp10"}},{"score":{"name":"sec_ones","objective":"cp10"}},{ "text": "."},{"score":{"name":"ms_tens","objective":"cp10"}},{"score":{"name":"ms_ones","objective":"cp10"}}]}
+## 체크포인트 10 도달 (플레이어별)
+tellraw @a {"rawtext":[{"selector":"@s"},{"text":" §eCP 10: §f"},{"score":{"name":"@s","objective":"tick_min_tens"}},{"score":{"name":"@s","objective":"tick_min_ones"}},{"text":":"},{"score":{"name":"@s","objective":"tick_sec_tens"}},{"score":{"name":"@s","objective":"tick_sec_ones"}},{"text":"."},{"score":{"name":"@s","objective":"tick_ms_tens"}},{"score":{"name":"@s","objective":"tick_ms_ones"}}]}
 
-scoreboard players set @e[tag=main] checkpoint 11
-spawnpoint @a 55 41 -109
+event entity @e[type=cleverlike:checkpoint] e_remove
+execute @s ~~~ playsound race_checkpoint @s ~~~ 2.0
+scoreboard players set @s checkpoint 11
+spawnpoint @s 55 41 -109
 schedule on_area_loaded add 96 49 -114 96 49 -114 schedules/loadcp11
-tag @a add reached_cp10
+tag @s add reached_cp10

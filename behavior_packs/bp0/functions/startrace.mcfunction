@@ -1,16 +1,38 @@
+## 멀티플레이어 레이스 시작 - 카운트다운 시작
 fill -56 87 21 -42 90 21 air
+
+## 모든 플레이어에게 아이템 지급
 execute @a ~~~ function give_supplies
-schedule on_area_loaded add 22 98 -79 22 98 -79 schedules/loadcp1
-scoreboard players set @e[tag=main] checkpoint 1
+
+## 대화 변경
+dialogue change @e[tag=main] during_race @a
+
+## 효과 부여
 effect @a instant_health 1 10 true
 effect @a saturation 1 50 true
-dialogue change @e[tag=main] during_race @a
-execute @a ~~~ playsound race_start @s ~~~ 2.0
-fill -40 87 43 -40 90 25 air 0 replace barrier
-fill -57 87 44 -57 90 25 air 0 replace barrier
-fill -56 90 21 -42 87 21 air 0 replace barrier
-summon cow -1 96 -63
-summon cow -1 96 -66
-summon cow -8 96 -58
-summon cow -4 96 -58
-summon cow -12 96 -74
+
+## 완주 카운터 초기화
+scoreboard players set @e[tag=main] finishcount 0
+
+## 플레이어 타이밍 초기화
+scoreboard players set @a tick_ms_ones 0
+scoreboard players set @a tick_ms_tens 0
+scoreboard players set @a tick_sec_ones 0
+scoreboard players set @a tick_sec_tens 0
+scoreboard players set @a tick_min_ones 0
+scoreboard players set @a tick_min_tens 0
+scoreboard players set @a totaltime 0
+scoreboard players set @a finishorder 0
+scoreboard players set @a rank 0
+
+## 준비 메시지
+titleraw @a title {"rawtext":[{"text":"§6준비!"}]}
+titleraw @a subtitle {"rawtext":[{"text":"§7Get Ready!"}]}
+playsound note.bass @a ~~~ 1.0 0.5
+
+## 3초 후 카운트다운 시작 (schedule 사용)
+## 베드락에서는 schedule이 제한적이므로 scoreboard 기반 카운트다운 사용
+scoreboard players set @e[tag=main] countdown 60
+
+## 카운트다운 태그 추가
+tag @e[tag=main] add counting
