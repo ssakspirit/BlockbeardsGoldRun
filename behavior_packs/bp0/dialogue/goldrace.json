@@ -1,0 +1,76 @@
+{
+	"format_version": "1.14",
+	"minecraft:npc_dialogue": {
+		"scenes": [
+			{
+				"scene_tag": "before_race",
+				"npc_name": {
+					"rawtext": [
+						{
+							"translate": "entity.race_starter.name"
+						}
+					]
+				},
+				"text": {
+					"rawtext": [
+						{
+							"translate": "before_race.race_starter.intro1",
+							"with": [
+								"\n"
+							]
+						}
+					]
+				},
+				"buttons": [
+					{
+						"name": {
+							"rawtext": [
+								{
+									"translate": "dialogue.button.start_race"
+								}
+							]
+						},
+						"commands": ["/function startrace","/dialogue change @e[x=-49,y=87,z=24,r=3] during_race"
+					]
+					}
+				],
+				"on_close_commands": [
+					"/dialogue change @e[x=-49,y=87,z=24,r=3] during_race"
+				]
+			},
+			{
+				"scene_tag": "during_race",
+				"npc_name": {
+					"rawtext": [
+						{
+							"translate": "entity.race_starter.name"
+						}
+					]
+				},
+				"text": {
+					"rawtext": [
+						{
+							"translate": "during_race.race_starter.text1",
+							"with": [
+								"\n"
+							]
+						}
+					]
+				},
+				"buttons": [
+					{
+						"name": {
+							"rawtext": [
+								{
+									"translate": "dialogue.button.race"
+								}
+							]
+						},
+						"commands": []
+					}
+				]
+			}
+
+		]
+	}
+}

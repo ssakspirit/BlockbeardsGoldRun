@@ -1,0 +1,317 @@
+{
+	"format_version": "1.16.0",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "cleverlike:spectator",
+			"is_spawnable": true,
+			"is_summonable": true,
+			"is_experimental": false
+		},
+		"component_groups": {
+			"cleverlike:skin_1": {
+				"minecraft:skin_id": {
+					"value": 0
+				}
+			},
+			"cleverlike:skin_2": {
+				"minecraft:skin_id": {
+					"value": 1
+				}
+			},
+			"cleverlike:skin_3": {
+				"minecraft:skin_id": {
+					"value": 2
+				}
+			},
+			"cleverlike:skin_4": {
+				"minecraft:skin_id": {
+					"value": 3
+				}
+			},
+			"cleverlike:skin_5": {
+				"minecraft:skin_id": {
+					"value": 4
+				}
+			},
+			"cleverlike:skin_6": {
+				"minecraft:skin_id": {
+					"value": 5
+				}
+			},
+			"cleverlike:skin_7": {
+				"minecraft:skin_id": {
+					"value": 6
+				}
+			},
+			"cleverlike:skin_8": {
+				"minecraft:skin_id": {
+					"value": 7
+				}
+			},
+			"cleverlike:skin_9": {
+				"minecraft:skin_id": {
+					"value": 8
+				}
+			},
+			"cleverlike:skin_10": {
+				"minecraft:skin_id": {
+					"value": 9
+				}
+			},
+			"cleverlike:skin_11": {
+				"minecraft:skin_id": {
+					"value": 10
+				}
+			},
+			"cleverlike:skin_12": {
+				"minecraft:skin_id": {
+					"value": 11
+				}
+			},
+			"cleverlike:skin_13": {
+				"minecraft:skin_id": {
+					"value": 12
+				}
+			},
+			"cleverlike:skin_14": {
+				"minecraft:skin_id": {
+					"value": 13
+				}
+			},
+			"cleverlike:skin_15": {
+				"minecraft:skin_id": {
+					"value": 14
+				}
+			},
+			"cleverlike:skin_16": {
+				"minecraft:skin_id": {
+					"value": 15
+				}
+			},
+			"cleverlike:skin_17": {
+				"minecraft:skin_id": {
+					"value": 16
+				}
+			},
+			"cleverlike:skin_18": {
+				"minecraft:skin_id": {
+					"value": 17
+				}
+			},
+			"cleverlike:skin_19": {
+				"minecraft:skin_id": {
+					"value": 18
+				}
+			},
+			"cleverlike:skin_20": {
+				"minecraft:skin_id": {
+					"value": 19
+				}
+			}
+
+		},
+		"components": {			
+		"minecraft:physics": {},
+		"minecraft:damage_sensor": {
+			"triggers": {
+				"cause": "all",
+				"deals_damage": false
+			}
+		},
+		"minecraft:movement": {
+			"value": 0
+		},
+		"minecraft:jump.static": {},
+		"minecraft:movement.basic": {},
+		"minecraft:navigation.walk": {
+			"can_jump": true,
+			"can_open_doors": true
+		},
+		"minecraft:behavior.random_look_around": {
+			"priority": 5
+		},
+		"minecraft:collision_box": {
+			"height": 2,
+			"width": 1
+		},
+		"minecraft:pushable": {
+			"is_pushable": true,
+			"is_pushable_by_piston": true
+		},
+		"minecraft:behavior.random_stroll": {
+			"priority": 2,
+			"interval": 120,
+			"xz_dist": 10,
+			"y_dist": 7
+		},
+		"minecraft:behavior.look_at_player": {
+			"look_distance": 32,
+			"look_time": [
+				3,
+				8
+			],
+			"priority": 1
+		}
+	},
+
+		"events": {
+			"minecraft:entity_spawned": {
+				
+				"randomize": [
+					{
+						"weight": 1,
+						"add": {
+							"component_groups": [
+								"cleverlike:skin_1"
+							]
+						}
+					},
+					{
+						"weight": 1,
+						"add": {
+							"component_groups": [
+								"cleverlike:skin_2"
+							]
+						}
+					},
+					{
+						"weight": 1,
+						"add": {
+							"component_groups": [
+								"cleverlike:skin_3"
+							]
+						}
+					},
+					{
+						"weight": 1,
+						"add": {
+							"component_groups": [
+								"cleverlike:skin_4"
+							]
+						}
+					},
+					{
+						"weight": 1,
+						"add": {
+							"component_groups": [
+								"cleverlike:skin_5"
+							]
+						}
+					},
+					{
+						"weight": 1,
+						"add": {
+							"component_groups": [
+								"cleverlike:skin_6"
+							]
+						}
+					},
+					{
+						"weight": 1,
+						"add": {
+							"component_groups": [
+								"cleverlike:skin_7"
+							]
+						}
+					},
+					{
+						"weight": 1,
+						"add": {
+							"component_groups": [
+								"cleverlike:skin_8"
+							]
+						}
+					},
+					{
+						"weight": 1,
+						"add": {
+							"component_groups": [
+								"cleverlike:skin_9"
+							]
+						}
+					},
+					{
+						"weight": 1,
+						"add": {
+							"component_groups": [
+								"cleverlike:skin_10"
+							]
+						}
+					},
+					{
+						"weight": 1,
+						"add": {
+							"component_groups": [
+								"cleverlike:skin_11"
+							]
+						}
+					},
+					{
+						"weight": 1,
+						"add": {
+							"component_groups": [
+								"cleverlike:skin_12"
+							]
+						}
+					},
+					{
+						"weight": 1,
+						"add": {
+							"component_groups": [
+								"cleverlike:skin_13"
+							]
+						}
+					},
+					{
+						"weight": 1,
+						"add": {
+							"component_groups": [
+								"cleverlike:skin_14"
+							]
+						}
+					},
+					{
+						"weight": 1,
+						"add": {
+							"component_groups": [
+								"cleverlike:skin_15"
+							]
+						}
+					},
+					{
+						"weight": 1,
+						"add": {
+							"component_groups": [
+								"cleverlike:skin_16"
+							]
+						}
+					},
+					{
+						"weight": 1,
+						"add": {
+							"component_groups": [
+								"cleverlike:skin_17"
+							]
+						}
+					},
+					{
+						"weight": 1,
+						"add": {
+							"component_groups": [
+								"cleverlike:skin_18"
+							]
+						}
+					},
+					{
+						"weight": 1,
+						"add": {
+							"component_groups": [
+								"cleverlike:skin_19"
+							]
+						}
+					}																																								
+				]
+			}
+		}
+	}
+}

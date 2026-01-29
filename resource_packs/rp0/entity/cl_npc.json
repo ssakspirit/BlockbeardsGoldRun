@@ -1,0 +1,25 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "cleverlike:cl_npc",
+			"materials": {
+				"default": "villager_v2",
+				"masked": "skeleton"
+			},
+			"textures": {
+				"default":"textures/entity/npc/npc_1"
+			},
+			"geometry": {
+				"default": "geometry.cl_npc"
+			},
+			"render_controllers": [
+				"controller.render.default"
+			],
+			"spawn_egg": {
+				"base_color": "#000000",
+				"overlay_color": "#FFFFFF"
+			}
+		}
+	}
+}

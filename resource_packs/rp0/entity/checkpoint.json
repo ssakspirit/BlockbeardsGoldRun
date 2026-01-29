@@ -1,0 +1,33 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "cleverlike:checkpoint",
+			"spawn_egg": {
+				"base_color": "#DBC315",
+				"overlay_color": "#ED790C"
+			},
+			"render_controllers": [
+				"controller.render.default_cl"
+
+			],
+			"geometry": {
+				"default": "geometry.checkpoint"
+			},
+			"textures": {
+				"default": "textures/entity/checkpoint1"
+			},
+			"materials": {
+				"default": "checkpoint"
+			},
+			"animations": {
+				"default": "animation.checkpoint.new"
+			},
+			"scripts": {
+				"animate": [
+					"default"
+				]
+			}
+		}
+	}
+}

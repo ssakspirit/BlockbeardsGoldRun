@@ -1,0 +1,10 @@
+{
+	"resource_pack_name": "Cleverlike Prototyping",
+	"texture_name": "atlas.items",
+	"texture_data": {
+
+        "bluegem": {
+            "textures": "textures/items/bluegem"
+        }
+    }
+}

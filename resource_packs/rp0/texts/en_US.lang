@@ -1,0 +1,14 @@
+pack.name=Gold Race RP
+pack.description=by Cleverlike
+entity.race_starter.name=Blockbeard
+before_race.race_starter.intro1=Welcome to Blockbeard's Gold Run! This is a timed race that will test your Minecraft knowledge and skill. Only the most clever players will win the race and claim their gold. After starting the race, proceed to each checkpoint until you reach the finish line. You'll get some items that you can use anytime during the race. Good luck!
+dialogue.button.start_race=Start Race!
+during_race.race_starter.text1=Go!!! This race has started. Find the fastest way to reach each checkpoint and finish the race. Use the items in your inventory and look for chests along the way that would have helpful items. You should get going. Time's is ticking!
+
+dialogue.button.race=Okay
+
+
+
+
+
+

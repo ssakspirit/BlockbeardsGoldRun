@@ -1,0 +1,36 @@
+{
+	"format_version": "1.14.0",
+	"sound_definitions": {
+		"race_checkpoint": {
+			"sounds":[
+				{
+					"name":"sounds/race_checkpoint",
+					"volume":1.5
+				}
+			]
+		},
+		"race_start":{
+			"sounds":[
+				{
+					"name":"sounds/race_start",
+					"volume": 1.5
+				}
+			]
+		},
+		"race_finish":{
+			"sounds": [
+				{
+					"name":"sounds/race_finish",
+					"volume":1.5
+				}
+			]
+		},
+		"race_crowdcheer":{
+			"sounds":[
+				{
+					"name": "sounds/race_crowdcheer"
+				}
+			]
+		}
+	}
+}

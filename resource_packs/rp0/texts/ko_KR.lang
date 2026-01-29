@@ -1,0 +1,12 @@
+pack.name=골드 레이스 RP
+pack.description=By Cleverlike
+entity.race_starter.name=블록비어드
+before_race.race_starter.intro1=블록비어드의 골드 런에 오신 것을 환영합니다! 이 게임은 여러분의 Minecraft 지식과 실력을 시험하는 시간 제한 레이스입니다. 가장 똑똑한 플레이어만이 레이스에서 승리하고 금을 차지할 수 있습니다. 레이스를 시작한 후, 결승선에 도달할 때까지 각 체크포인트로 이동하세요. 레이스 중 언제든지 사용할 수 있는 아이템들이 주어집니다. 행운을 빕니다!
+dialogue.button.start_race=레이스 시작!
+during_race.race_starter.text1=출발!!! 레이스가 시작되었습니다. 각 체크포인트에 도달하고 레이스를 완료하는 가장 빠른 방법을 찾으세요. 인벤토리에 있는 아이템을 사용하고 도움이 되는 아이템이 들어 있는 상자를 찾아보세요. 빨리 가세요. 시간이 흐르고 있습니다!
+
+dialogue.button.race=알겠어요
+
+
+
+

@@ -1,0 +1,47 @@
+{
+	"format_version": "1.10.0",
+	"minecraft:client_entity": {
+		"description": {
+			"identifier": "cleverlike:spectator",
+			"materials": {
+				"default": "skeleton"
+			},
+			"textures": {
+				"skin_1":"textures/entity/skins/01",
+				"skin_2":"textures/entity/skins/02",
+				"skin_3":"textures/entity/skins/03",
+				"skin_4":"textures/entity/skins/04",
+				"skin_5":"textures/entity/skins/05",
+				"skin_6":"textures/entity/skins/06",
+				"skin_7":"textures/entity/skins/07",
+				"skin_8":"textures/entity/skins/08",
+				"skin_9":"textures/entity/skins/09",
+				"skin_10":"textures/entity/skins/10",
+				"skin_11":"textures/entity/skins/11",
+				"skin_12":"textures/entity/skins/12",
+				"skin_13":"textures/entity/skins/13",
+				"skin_14":"textures/entity/skins/14",
+				"skin_15":"textures/entity/skins/15",
+				"skin_16":"textures/entity/skins/16",
+				"skin_17":"textures/entity/skins/17",
+				"skin_18":"textures/entity/skins/18",
+				"skin_19":"textures/entity/skins/19",
+				"skin_20":"textures/entity/skins/20"
+			},
+			"geometry": {
+				"default": "geometry.humanoid"
+			},
+			"render_controllers": [
+				"controller.render.spectator"
+			],
+			"animations": {
+				"cheer":"animation.advanced_npc.cheer",
+				"idle":"animation.advanced_npc.idle"
+			},
+			"spawn_egg": {
+				"base_color": "#000000",
+				"overlay_color": "#FFFFFF"
+			}
+		}
+	}
+}

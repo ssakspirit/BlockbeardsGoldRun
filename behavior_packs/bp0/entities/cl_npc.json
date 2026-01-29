@@ -1,0 +1,1031 @@
+{
+	"format_version": "1.16.0",
+	"minecraft:entity": {
+		"description": {
+			"identifier": "cleverlike:cl_npc",
+			"is_spawnable": true,
+			"is_summonable": true,
+			"is_experimental": false
+		},
+		"component_groups": {
+			"mcd:cooldown": {
+				"minecraft:timer": {
+					"looping": false,
+					"time": [
+						1000,
+						1500
+					],
+					"time_down_event": {
+						"event": "mcd:end_cooldown"
+					}
+				}
+			},
+			"mcd:no_cooldown": {
+				"minecraft:npc": {}
+			},
+			"mcd:stranger_1": {
+				"minecraft:type_family": {
+					"family": [
+						"npc",
+						"stranger_1"
+					]
+				},
+				"minecraft:behavior.avoid_mob_type": {
+					"entity_types": "minecraft:player",
+					"avoid_target_xz": 16,
+					"max_dist": 16,
+					"max_flee": 10,
+					"sprint_speed_multiplier": 1.2,
+					"priority": 1,
+					"avoid_target_y": 7
+				}
+			},
+			"mcd:stranger_2": {
+				"minecraft:type_family": {
+					"family": [
+						"npc",
+						"stranger_2"
+					]
+				},
+				"minecraft:behavior.avoid_mob_type": {
+					"entity_types": "minecraft:player",
+					"avoid_target_xz": 12,
+					"max_dist": 12,
+					"max_flee": 7,
+					"sprint_speed_multiplier": 1.1,
+					"priority": 2,
+					"avoid_target_y": 5
+				}
+			},
+			"mcd:base_1a": {
+				"minecraft:skin_id": {
+					"value": 0
+				}
+			},
+			"mcd:base_1b": {
+				"minecraft:skin_id": {
+					"value": 1
+				}
+			},
+			"mcd:base_1c": {
+				"minecraft:skin_id": {
+					"value": 2
+				}
+			},
+			"mcd:base_1d": {
+				"minecraft:skin_id": {
+					"value": 3
+				}
+			},
+			"mcd:base_1e": {
+				"minecraft:skin_id": {
+					"value": 4
+				}
+			},
+			"mcd:base_1f": {
+				"minecraft:skin_id": {
+					"value": 5
+				}
+			},
+			"mcd:base_2a": {
+				"minecraft:skin_id": {
+					"value": 6
+				}
+			},
+			"mcd:base_2b": {
+				"minecraft:skin_id": {
+					"value": 7
+				}
+			},
+			"mcd:base_2c": {
+				"minecraft:skin_id": {
+					"value": 8
+				}
+			},
+			"mcd:base_2d": {
+				"minecraft:skin_id": {
+					"value": 9
+				}
+			},
+			"mcd:base_2e": {
+				"minecraft:skin_id": {
+					"value": 10
+				}
+			},
+			"mcd:base_2f": {
+				"minecraft:skin_id": {
+					"value": 11
+				}
+			},
+			"mcd:base_3a": {
+				"minecraft:skin_id": {
+					"value": 12
+				}
+			},
+			"mcd:base_3b": {
+				"minecraft:skin_id": {
+					"value": 13
+				}
+			},
+			"mcd:base_3c": {
+				"minecraft:skin_id": {
+					"value": 14
+				}
+			},
+			"mcd:base_3d": {
+				"minecraft:skin_id": {
+					"value": 15
+				}
+			},
+			"mcd:base_3e": {
+				"minecraft:skin_id": {
+					"value": 16
+				}
+			},
+			"mcd:base_3f": {
+				"minecraft:skin_id": {
+					"value": 17
+				}
+			},
+			"mcd:base_4a": {
+				"minecraft:skin_id": {
+					"value": 18
+				}
+			},
+			"mcd:base_4b": {
+				"minecraft:skin_id": {
+					"value": 19
+				}
+			},
+			"mcd:base_4c": {
+				"minecraft:skin_id": {
+					"value": 20
+				}
+			},
+			"mcd:base_4d": {
+				"minecraft:skin_id": {
+					"value": 21
+				}
+			},
+			"mcd:base_4e": {
+				"minecraft:skin_id": {
+					"value": 22
+				}
+			},
+			"mcd:base_4f": {
+				"minecraft:skin_id": {
+					"value": 23
+				}
+			},
+			"mcd:base_4g": {
+				"minecraft:skin_id": {
+					"value": 24
+				}
+			},
+			"mcd:base_5a": {
+				"minecraft:skin_id": {
+					"value": 25
+				}
+			},
+			"mcd:base_5b": {
+				"minecraft:skin_id": {
+					"value": 26
+				}
+			},
+			"mcd:base_5c": {
+				"minecraft:skin_id": {
+					"value": 27
+				}
+			},
+			"mcd:base_5d": {
+				"minecraft:skin_id": {
+					"value": 28
+				}
+			},
+			"mcd:base_5e": {
+				"minecraft:skin_id": {
+					"value": 29
+				}
+			},
+			"mcd:base_5f": {
+				"minecraft:skin_id": {
+					"value": 30
+				}
+			},
+			"mcd:base_6a": {
+				"minecraft:skin_id": {
+					"value": 31
+				}
+			},
+			"mcd:base_6b": {
+				"minecraft:skin_id": {
+					"value": 32
+				}
+			},
+			"mcd:base_6c": {
+				"minecraft:skin_id": {
+					"value": 33
+				}
+			},
+			"mcd:base_6d": {
+				"minecraft:skin_id": {
+					"value": 34
+				}
+			},
+			"mcd:base_6e": {
+				"minecraft:skin_id": {
+					"value": 35
+				}
+			},
+			"mcd:base_6f": {
+				"minecraft:skin_id": {
+					"value": 36
+				}
+			},
+			"mcd:base_7a": {
+				"minecraft:skin_id": {
+					"value": 37
+				}
+			},
+			"mcd:base_7b": {
+				"minecraft:skin_id": {
+					"value": 38
+				}
+			},
+			"mcd:base_7c": {
+				"minecraft:skin_id": {
+					"value": 39
+				}
+			},
+			"mcd:base_7d": {
+				"minecraft:skin_id": {
+					"value": 40
+				}
+			},
+			"mcd:base_7e": {
+				"minecraft:skin_id": {
+					"value": 41
+				}
+			},
+			"mcd:base_8a": {
+				"minecraft:skin_id": {
+					"value": 42
+				}
+			},
+			"mcd:base_8b": {
+				"minecraft:skin_id": {
+					"value": 43
+				}
+			},
+			"mcd:base_8c": {
+				"minecraft:skin_id": {
+					"value": 44
+				}
+			},
+			"mcd:pants_1": {
+				"minecraft:mark_variant": {
+					"value": 0
+				}
+			},
+			"mcd:pants_2": {
+				"minecraft:mark_variant": {
+					"value": 1
+				}
+			},
+			"mcd:pants_3": {
+				"minecraft:mark_variant": {
+					"value": 2
+				}
+			},
+			"mcd:pants_4": {
+				"minecraft:mark_variant": {
+					"value": 3
+				}
+			},
+			"mcd:pants_5": {
+				"minecraft:mark_variant": {
+					"value": 4
+				}
+			},
+			"mcd:pants_6": {
+				"minecraft:mark_variant": {
+					"value": 5
+				}
+			},
+			"mcd:pants_7": {
+				"minecraft:mark_variant": {
+					"value": 6
+				}
+			},
+			"mcd:shirt_1": {
+				"minecraft:variant": {
+					"value": 0
+				}
+			},
+			"mcd:shirt_2": {
+				"minecraft:variant": {
+					"value": 1
+				}
+			},
+			"mcd:shirt_3": {
+				"minecraft:variant": {
+					"value": 2
+				}
+			},
+			"mcd:shirt_4": {
+				"minecraft:variant": {
+					"value": 3
+				}
+			},
+			"mcd:shirt_5": {
+				"minecraft:variant": {
+					"value": 4
+				}
+			},
+			"mcd:shirt_6": {
+				"minecraft:variant": {
+					"value": 5
+				}
+			},
+			"mcd:shirt_7": {
+				"minecraft:variant": {
+					"value": 6
+				}
+			},
+			"mcd:shirt_8": {
+				"minecraft:variant": {
+					"value": 7
+				}
+			},
+			"mcd:hair_1": {
+				"minecraft:type_family": {
+					"family": [
+						"adv_npc",
+						"hair_1"
+					]
+				}
+			},
+			"mcd:hair_2": {
+				"minecraft:type_family": {
+					"family": [
+						"adv_npc",
+						"hair_2"
+					]
+				}
+			},
+			"mcd:hair_3": {
+				"minecraft:type_family": {
+					"family": [
+						"adv_npc",
+						"hair_3"
+					]
+				}
+			}
+		},
+		"components": {
+			"minecraft:physics": {},
+			"minecraft:damage_sensor": {
+				"triggers": {
+					"cause": "all",
+					"deals_damage": false
+				}
+			},
+			"minecraft:movement": {
+				"value": 0
+			},
+			"minecraft:jump.static": {},
+			"minecraft:movement.basic": {},
+			"minecraft:navigation.walk": {
+				"can_jump": true,
+				"can_open_doors": true
+			},
+			"minecraft:behavior.random_look_around": {
+				"priority": 5
+			},
+			"minecraft:collision_box": {
+				"height": 2,
+				"width": 1
+			},
+			"minecraft:pushable": {
+				"is_pushable": true,
+				"is_pushable_by_piston": true
+			},
+			"minecraft:behavior.random_stroll": {
+				"priority": 2,
+				"interval": 120,
+				"xz_dist": 10,
+				"y_dist": 7
+			},
+			"minecraft:behavior.look_at_player": {
+				"look_distance": 32,
+				"look_time": [
+					3,
+					8
+				],
+				"priority": 1
+			}
+		},
+		"events": {
+			"mcd:stranger": {
+				"randomize": [
+					{
+						"weight": 1,
+						"run_command": {
+							"command": [
+								"execute @s ~~~ dialogue change @s stranger.scene.1 @a"
+							]
+						}
+					},
+					{
+						"weight": 1,
+						"run_command": {
+							"command": [
+								"execute @s ~~~ dialogue change @s stranger.scene.2 @a"
+							]
+						}
+					},
+					{
+						"weight": 1,
+						"run_command": {
+							"command": [
+								"execute @s ~~~ dialogue change @s stranger.scene.3 @a"
+							]
+						}
+					},
+					{
+						"weight": 1,
+						"run_command": {
+							"command": [
+								"execute @s ~~~ dialogue change @s stranger.scene.4 @a"
+							]
+						}
+					},
+					{
+						"weight": 1,
+						"run_command": {
+							"command": [
+								"execute @s ~~~ dialogue change @s stranger.scene.5 @a"
+							]
+						}
+					}
+				]
+			},
+			"mcd:cooldown": {
+				"remove": {
+					"component_groups": [
+						"mcd:no_cooldown"
+					]
+				},
+				"add": {
+					"component_groups": [
+						"mcd:cooldown"
+					]
+				},
+				"run_command": {
+					"command": [
+						"tag @s add cooldown"
+					]
+				}
+			},
+			"mcd:end_cooldown": {
+				"remove": {
+					"component_groups": [
+						"mcd:cooldown"
+					]
+				},
+				"add": {
+					"component_groups": [
+						"mcd:no_cooldown"
+					]
+				},
+				"run_command": {
+					"command": [
+						"tag @s remove cooldown"
+					]
+				}
+			},
+			"minecraft:entity_spawned": {
+				"sequence": [
+					{
+						"add": {
+							"component_groups": [
+								"mcd:no_cooldown"
+							]
+						}
+					},
+					{
+						"randomize": [
+							{
+								"weight": 1,
+								"add": {
+									"component_groups": [
+										"mcd:base_1a"
+									]
+								}
+							},
+							{
+								"weight": 1,
+								"add": {
+									"component_groups": [
+										"mcd:base_1b"
+									]
+								}
+							},
+							{
+								"weight": 1,
+								"add": {
+									"component_groups": [
+										"mcd:base_1c"
+									]
+								}
+							},
+							{
+								"weight": 1,
+								"add": {
+									"component_groups": [
+										"mcd:base_1d"
+									]
+								}
+							},
+							{
+								"weight": 1,
+								"add": {
+									"component_groups": [
+										"mcd:base_1e"
+									]
+								}
+							},
+							{
+								"weight": 1,
+								"add": {
+									"component_groups": [
+										"mcd:base_1f"
+									]
+								}
+							},
+							{
+								"weight": 1,
+								"add": {
+									"component_groups": [
+										"mcd:base_2a"
+									]
+								}
+							},
+							{
+								"weight": 1,
+								"add": {
+									"component_groups": [
+										"mcd:base_2b"
+									]
+								}
+							},
+							{
+								"weight": 1,
+								"add": {
+									"component_groups": [
+										"mcd:base_2c"
+									]
+								}
+							},
+							{
+								"weight": 1,
+								"add": {
+									"component_groups": [
+										"mcd:base_2d"
+									]
+								}
+							},
+							{
+								"weight": 1,
+								"add": {
+									"component_groups": [
+										"mcd:base_2e"
+									]
+								}
+							},
+							{
+								"weight": 1,
+								"add": {
+									"component_groups": [
+										"mcd:base_2f"
+									]
+								}
+							},
+							{
+								"weight": 1,
+								"add": {
+									"component_groups": [
+										"mcd:base_3a"
+									]
+								}
+							},
+							{
+								"weight": 1,
+								"add": {
+									"component_groups": [
+										"mcd:base_3b"
+									]
+								}
+							},
+							{
+								"weight": 1,
+								"add": {
+									"component_groups": [
+										"mcd:base_3c"
+									]
+								}
+							},
+							{
+								"weight": 1,
+								"add": {
+									"component_groups": [
+										"mcd:base_3d"
+									]
+								}
+							},
+							{
+								"weight": 1,
+								"add": {
+									"component_groups": [
+										"mcd:base_3e"
+									]
+								}
+							},
+							{
+								"weight": 1,
+								"add": {
+									"component_groups": [
+										"mcd:base_3f"
+									]
+								}
+							},
+							{
+								"weight": 1,
+								"add": {
+									"component_groups": [
+										"mcd:base_4a"
+									]
+								}
+							},
+							{
+								"weight": 1,
+								"add": {
+									"component_groups": [
+										"mcd:base_4b"
+									]
+								}
+							},
+							{
+								"weight": 1,
+								"add": {
+									"component_groups": [
+										"mcd:base_4c"
+									]
+								}
+							},
+							{
+								"weight": 1,
+								"add": {
+									"component_groups": [
+										"mcd:base_4d"
+									]
+								}
+							},
+							{
+								"weight": 1,
+								"add": {
+									"component_groups": [
+										"mcd:base_4e"
+									]
+								}
+							},
+							{
+								"weight": 1,
+								"add": {
+									"component_groups": [
+										"mcd:base_4f"
+									]
+								}
+							},
+							{
+								"weight": 1,
+								"add": {
+									"component_groups": [
+										"mcd:base_4g"
+									]
+								}
+							},
+							{
+								"weight": 1,
+								"add": {
+									"component_groups": [
+										"mcd:base_5a"
+									]
+								}
+							},
+							{
+								"weight": 1,
+								"add": {
+									"component_groups": [
+										"mcd:base_5b"
+									]
+								}
+							},
+							{
+								"weight": 1,
+								"add": {
+									"component_groups": [
+										"mcd:base_5c"
+									]
+								}
+							},
+							{
+								"weight": 1,
+								"add": {
+									"component_groups": [
+										"mcd:base_5d"
+									]
+								}
+							},
+							{
+								"weight": 1,
+								"add": {
+									"component_groups": [
+										"mcd:base_5e"
+									]
+								}
+							},
+							{
+								"weight": 1,
+								"add": {
+									"component_groups": [
+										"mcd:base_5f"
+									]
+								}
+							},
+							{
+								"weight": 1,
+								"add": {
+									"component_groups": [
+										"mcd:base_6a"
+									]
+								}
+							},
+							{
+								"weight": 1,
+								"add": {
+									"component_groups": [
+										"mcd:base_6b"
+									]
+								}
+							},
+							{
+								"weight": 1,
+								"add": {
+									"component_groups": [
+										"mcd:base_6c"
+									]
+								}
+							},
+							{
+								"weight": 1,
+								"add": {
+									"component_groups": [
+										"mcd:base_6d"
+									]
+								}
+							},
+							{
+								"weight": 1,
+								"add": {
+									"component_groups": [
+										"mcd:base_6e"
+									]
+								}
+							},
+							{
+								"weight": 1,
+								"add": {
+									"component_groups": [
+										"mcd:base_6f"
+									]
+								}
+							},
+							{
+								"weight": 1,
+								"add": {
+									"component_groups": [
+										"mcd:base_7a"
+									]
+								}
+							},
+							{
+								"weight": 1,
+								"add": {
+									"component_groups": [
+										"mcd:base_7b"
+									]
+								}
+							},
+							{
+								"weight": 1,
+								"add": {
+									"component_groups": [
+										"mcd:base_7c"
+									]
+								}
+							},
+							{
+								"weight": 1,
+								"add": {
+									"component_groups": [
+										"mcd:base_7d"
+									]
+								}
+							},
+							{
+								"weight": 1,
+								"add": {
+									"component_groups": [
+										"mcd:base_7e"
+									]
+								}
+							},
+							{
+								"weight": 1,
+								"add": {
+									"component_groups": [
+										"mcd:base_8a"
+									]
+								}
+							},
+							{
+								"weight": 1,
+								"add": {
+									"component_groups": [
+										"mcd:base_8b"
+									]
+								}
+							},
+							{
+								"weight": 1,
+								"add": {
+									"component_groups": [
+										"mcd:base_8c"
+									]
+								}
+							}
+						]
+					},
+					{
+						"randomize": [
+							{
+								"weight": 1,
+								"add": {
+									"component_groups": [
+										"mcd:pants_1"
+									]
+								}
+							},
+							{
+								"weight": 1,
+								"add": {
+									"component_groups": [
+										"mcd:pants_2"
+									]
+								}
+							},
+							{
+								"weight": 1,
+								"add": {
+									"component_groups": [
+										"mcd:pants_3"
+									]
+								}
+							},
+							{
+								"weight": 1,
+								"add": {
+									"component_groups": [
+										"mcd:pants_4"
+									]
+								}
+							},
+							{
+								"weight": 1,
+								"add": {
+									"component_groups": [
+										"mcd:pants_5"
+									]
+								}
+							},
+							{
+								"weight": 1,
+								"add": {
+									"component_groups": [
+										"mcd:pants_6"
+									]
+								}
+							},
+							{
+								"weight": 1,
+								"add": {
+									"component_groups": [
+										"mcd:pants_7"
+									]
+								}
+							}
+						]
+					},
+					{
+						"randomize": [
+							{
+								"weight": 1,
+								"add": {
+									"component_groups": [
+										"mcd:shirt_1"
+									]
+								}
+							},
+							{
+								"weight": 1,
+								"add": {
+									"component_groups": [
+										"mcd:shirt_2"
+									]
+								}
+							},
+							{
+								"weight": 1,
+								"add": {
+									"component_groups": [
+										"mcd:shirt_3"
+									]
+								}
+							},
+							{
+								"weight": 1,
+								"add": {
+									"component_groups": [
+										"mcd:shirt_4"
+									]
+								}
+							},
+							{
+								"weight": 1,
+								"add": {
+									"component_groups": [
+										"mcd:shirt_5"
+									]
+								}
+							},
+							{
+								"weight": 1,
+								"add": {
+									"component_groups": [
+										"mcd:shirt_6"
+									]
+								}
+							},
+							{
+								"weight": 1,
+								"add": {
+									"component_groups": [
+										"mcd:shirt_7"
+									]
+								}
+							},
+							{
+								"weight": 1,
+								"add": {
+									"component_groups": [
+										"mcd:shirt_8"
+									]
+								}
+							}
+						]
+					}
+				]
+			},
+			"mcd:stranger_1": {
+				"add": {
+					"component_groups": [
+						"mcd:stranger_1"
+					]
+				}
+			},
+			"mcd:stranger_2": {
+				"remove": {
+					"component_groups": [
+						"mcd:stranger_1"
+					]
+				},
+				"add": {
+					"component_groups": [
+						"mcd:stranger_2"
+					]
+				}
+			}
+		}
+	}
+}
