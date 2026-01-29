@@ -1,5 +1,13 @@
 function actionbars
 
+## Auto-setup when first player joins (runs once per world)
+## Only run setup if main NPC doesn't exist yet
+## Sync dialogue for new players joining mid-game
+execute @e[tag=main,c=1,scores={checkpoint=0}] ~~~ dialogue change @s before_race @a[tag=!world_setup]
+execute @e[tag=main,c=1] ~~~ tag @a[tag=!world_setup] add world_setup
+execute @a[tag=!world_setup,c=1] ~~~ function setup_all
+tag @a[tag=!world_setup] add world_setup
+
 execute @e[tag=main] ~~~ scoreboard players add @s tick_clock 1
 execute @e[tag=main] ~~~ scoreboard players add @s tick_ms 5
 execute @e[scores={tick_ms=100}] ~~~ function ticksecond
