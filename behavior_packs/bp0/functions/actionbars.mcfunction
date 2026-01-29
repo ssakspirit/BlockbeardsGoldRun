@@ -8,5 +8,8 @@ execute @a[tag=reached_cp13,scores={finishorder=1}] ~~~ titleraw @s actionbar {"
 
 execute @a[tag=reached_cp13,scores={finishorder=2..}] ~~~ titleraw @s actionbar {"rawtext":[{"score":{"name":"@s","objective":"finishorder"}},{"text":"위 §e최종 기록: §f"},{"score":{"name":"@s","objective":"tick_min_tens"}},{"score":{"name":"@s","objective":"tick_min_ones"}},{"text":":"},{"score":{"name":"@s","objective":"tick_sec_tens"}},{"score":{"name":"@s","objective":"tick_sec_ones"}},{"text":"."},{"score":{"name":"@s","objective":"tick_ms_tens"}},{"score":{"name":"@s","objective":"tick_ms_ones"}}]}
 
-## 크리에이티브 모드 체크
-execute @a[scores={creative=1..}] ~~~ tag @s add creative
+## 호스트 - 관전 모드 표시
+execute @a[tag=host] ~~~ titleraw @s actionbar {"rawtext":[{"text":"§6[호스트] §7완주: "},{"score":{"name":"@e[tag=main]","objective":"finishcount"}},{"text":"명 §8| /function spectatornext"}]}
+
+## 크리에이티브 모드 체크 (호스트 제외)
+execute @a[tag=!host,scores={creative=1..}] ~~~ tag @s add creative

@@ -12,53 +12,56 @@ scoreboard players set @e[tag=main] tick_min_ones 0
 scoreboard players set @e[tag=main] tick_min_tens 0
 scoreboard players set @e[tag=main] totaltime 0
 
-## 플레이어 스코어 초기화
-scoreboard players set @a checkpoint 0
-scoreboard players set @a totaltime 0
-scoreboard players set @a finishorder 0
-scoreboard players set @a rank 0
-scoreboard players set @a tick_ms_ones 0
-scoreboard players set @a tick_ms_tens 0
-scoreboard players set @a tick_sec_ones 0
-scoreboard players set @a tick_sec_tens 0
-scoreboard players set @a tick_min_ones 0
-scoreboard players set @a tick_min_tens 0
-scoreboard players set @a cp1 0
-scoreboard players set @a cp2 0
-scoreboard players set @a cp3 0
-scoreboard players set @a cp4 0
-scoreboard players set @a cp5 0
-scoreboard players set @a cp6 0
-scoreboard players set @a cp7 0
-scoreboard players set @a cp8 0
-scoreboard players set @a cp9 0
-scoreboard players set @a cp10 0
-scoreboard players set @a cp11 0
-scoreboard players set @a cp12 0
-scoreboard players set @a cp13 0
+## 참가자 스코어 초기화 (호스트 제외)
+scoreboard players set @a[tag=!host] checkpoint 0
+scoreboard players set @a[tag=!host] totaltime 0
+scoreboard players set @a[tag=!host] finishorder 0
+scoreboard players set @a[tag=!host] rank 0
+scoreboard players set @a[tag=!host] tick_ms_ones 0
+scoreboard players set @a[tag=!host] tick_ms_tens 0
+scoreboard players set @a[tag=!host] tick_sec_ones 0
+scoreboard players set @a[tag=!host] tick_sec_tens 0
+scoreboard players set @a[tag=!host] tick_min_ones 0
+scoreboard players set @a[tag=!host] tick_min_tens 0
+scoreboard players set @a[tag=!host] cp1 0
+scoreboard players set @a[tag=!host] cp2 0
+scoreboard players set @a[tag=!host] cp3 0
+scoreboard players set @a[tag=!host] cp4 0
+scoreboard players set @a[tag=!host] cp5 0
+scoreboard players set @a[tag=!host] cp6 0
+scoreboard players set @a[tag=!host] cp7 0
+scoreboard players set @a[tag=!host] cp8 0
+scoreboard players set @a[tag=!host] cp9 0
+scoreboard players set @a[tag=!host] cp10 0
+scoreboard players set @a[tag=!host] cp11 0
+scoreboard players set @a[tag=!host] cp12 0
+scoreboard players set @a[tag=!host] cp13 0
 
-## 플레이어 상태 초기화
-clear @a
-effect @a clear
+## 참가자 상태 초기화 (호스트 제외)
+clear @a[tag=!host]
+effect @a[tag=!host] clear
 function remove_tags
-tag @a remove racing
-gamemode a @a
+tag @a[tag=!host] remove racing
+gamemode a @a[tag=!host]
+
+## 호스트는 크리에이티브 유지
+gamemode c @a[tag=host]
 
 ## 게임 규칙
 gamerule showcoordinates false
 gamerule sendcommandfeedback false
 gamerule commandblockoutput false
 
-## 효과 부여
-effect @a instant_health 1 10 true
-effect @a saturation 1 50 true
+## 효과 부여 (참가자만)
+effect @a[tag=!host] instant_health 1 10 true
+effect @a[tag=!host] saturation 1 50 true
 
 ## 대화 리셋
 dialogue change @e[tag=main] before_race @a
 tag @a remove equipped
 
-## 시작 위치로 이동
-tp @a -49 87 30 facing @e[tag=main]
+## 참가자만 시작 위치로 이동
+tp @a[tag=!host] -49 87 30 facing @e[tag=main]
 
 ## 장애물 제거
 kill @e[type=cow]
@@ -69,4 +72,5 @@ fill -57 87 44 -57 90 25 barrier 0 replace air
 fill -56 90 21 -42 87 21 barrier 0 replace air
 
 ## 리셋 메시지
-tellraw @a {"rawtext":[{"text":"§a레이스가 리셋되었습니다. NPC와 대화하여 새 게임을 시작하세요!"}]}
+tellraw @a[tag=!host] {"rawtext":[{"text":"§a레이스가 리셋되었습니다. 호스트가 시작할 때까지 대기하세요!"}]}
+tellraw @a[tag=host] {"rawtext":[{"text":"§6[호스트] §a레이스가 리셋되었습니다. /function hoststart 로 새 게임을 시작하세요!"}]}
