@@ -25,14 +25,5 @@ scoreboard players set @a totaltime 0
 scoreboard players set @a finishorder 0
 scoreboard players set @a rank 0
 
-## 준비 메시지
-titleraw @a title {"rawtext":[{"text":"§6준비!"}]}
-titleraw @a subtitle {"rawtext":[{"text":"§7Get Ready!"}]}
-playsound note.bass @a ~~~ 1.0 0.5
-
-## 3초 후 카운트다운 시작 (schedule 사용)
-## 베드락에서는 schedule이 제한적이므로 scoreboard 기반 카운트다운 사용
-scoreboard players set @e[tag=main] countdown 60
-
-## 카운트다운 태그 추가
-tag @e[tag=main] add counting
+## 바로 레이스 시작 (카운트다운 제거)
+function countdown_go

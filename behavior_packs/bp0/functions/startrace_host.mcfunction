@@ -25,14 +25,5 @@ scoreboard players set @a[tag=!host] finishorder 0
 scoreboard players set @a[tag=!host] rank 0
 scoreboard players set @a[tag=!host] checkpoint 0
 
-## 준비 메시지
-titleraw @a title {"rawtext":[{"text":"§6준비!"}]}
-titleraw @a subtitle {"rawtext":[{"text":"§7Get Ready!"}]}
-playsound note.bass @a ~~~ 1.0 0.5
-
-## 카운트다운 시작 (3초)
-scoreboard players set @e[tag=main] countdown 60
-tag @e[tag=main] add counting
-
-## 호스트에게 안내
-tellraw @a[tag=host] {"rawtext":[{"text":"§6[호스트] §a레이스가 곧 시작됩니다!"}]}
+## 바로 레이스 시작 (카운트다운 제거)
+function countdown_go
