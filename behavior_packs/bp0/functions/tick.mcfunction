@@ -48,45 +48,32 @@ execute @a[scores={tick_min_ones=10..}] ~~~ scoreboard players set @s tick_min_o
 execute @e[tag=main,scores={checkpoint=1..14}] ~~~ scoreboard players add @s tick_ms 5
 execute @e[scores={tick_ms=100}] ~~~ function ticksecond
 
-## === 체크포인트 감지 (플레이어별) ===
-execute @a[tag=racing,tag=!reached_cp1] ~~~ detect ~ 0 ~ concrete 0 tp @s ^ ^ ^0.5
-execute @a[tag=racing,tag=!reached_cp1] ~~~ detect ~ 0 ~ concrete 0 function checkpoint1
+## === 체크포인트 감지 (황금 고리 엔티티 근접 감지) ===
+execute @e[tag=cp1,type=cleverlike:checkpoint] ~~~ execute @a[tag=racing,tag=!reached_cp1,r=3] ~~~ function checkpoint1
 
-execute @a[tag=racing,tag=reached_cp1,tag=!reached_cp2] ~~~ detect ~ 0 ~ concrete 1 tp @s ^ ^ ^0.5
-execute @a[tag=racing,tag=!reached_cp2,tag=reached_cp1] ~~~ detect ~ 0 ~ concrete 1 function checkpoint2
+execute @e[tag=cp2,type=cleverlike:checkpoint] ~~~ execute @a[tag=racing,tag=reached_cp1,tag=!reached_cp2,r=3] ~~~ function checkpoint2
 
-execute @a[tag=racing,tag=reached_cp2,tag=!reached_cp3] ~~~ detect ~ 0 ~ concrete 2 tp @s ^ ^ ^0.5
-execute @a[tag=racing,tag=!reached_cp3,tag=reached_cp2] ~~~ detect ~ 0 ~ concrete 2 function checkpoint3
+execute @e[tag=cp3,type=cleverlike:checkpoint] ~~~ execute @a[tag=racing,tag=reached_cp2,tag=!reached_cp3,r=3] ~~~ function checkpoint3
 
-execute @a[tag=racing,tag=reached_cp3,tag=!reached_cp4] ~~~ detect ~ 0 ~ concrete 3 tp @s ^ ^ ^0.5
-execute @a[tag=racing,tag=!reached_cp4,tag=reached_cp3] ~~~ detect ~ 0 ~ concrete 3 function checkpoint4
+execute @e[tag=cp4,type=cleverlike:checkpoint] ~~~ execute @a[tag=racing,tag=reached_cp3,tag=!reached_cp4,r=3] ~~~ function checkpoint4
 
-execute @a[tag=racing,tag=reached_cp4,tag=!reached_cp5] ~~~ detect ~ 0 ~ concrete 4 tp @s ^ ^ ^0.5
-execute @a[tag=racing,tag=!reached_cp5,tag=reached_cp4] ~~~ detect ~ 0 ~ concrete 4 function checkpoint5
+execute @e[tag=cp5,type=cleverlike:checkpoint] ~~~ execute @a[tag=racing,tag=reached_cp4,tag=!reached_cp5,r=3] ~~~ function checkpoint5
 
-execute @a[tag=racing,tag=reached_cp5,tag=!reached_cp6] ~~~ detect ~ 0 ~ concrete 5 tp @s ^ ^ ^0.5
-execute @a[tag=racing,tag=!reached_cp6,tag=reached_cp5] ~~~ detect ~ 0 ~ concrete 5 function checkpoint6
+execute @e[tag=cp6,type=cleverlike:checkpoint] ~~~ execute @a[tag=racing,tag=reached_cp5,tag=!reached_cp6,r=3] ~~~ function checkpoint6
 
-execute @a[tag=racing,tag=reached_cp6,tag=!reached_cp7] ~~~ detect ~ 0 ~ concrete 6 tp @s ^ ^ ^0.5
-execute @a[tag=racing,tag=!reached_cp7,tag=reached_cp6] ~~~ detect ~ 0 ~ concrete 6 function checkpoint7
+execute @e[tag=cp7,type=cleverlike:checkpoint] ~~~ execute @a[tag=racing,tag=reached_cp6,tag=!reached_cp7,r=3] ~~~ function checkpoint7
 
-execute @a[tag=racing,tag=reached_cp7,tag=!reached_cp8] ~~~ detect ~ 0 ~ concrete 7 tp @s ^ ^ ^0.5
-execute @a[tag=racing,tag=!reached_cp8,tag=reached_cp7] ~~~ detect ~ 0 ~ concrete 7 function checkpoint8
+execute @e[tag=cp8,type=cleverlike:checkpoint] ~~~ execute @a[tag=racing,tag=reached_cp7,tag=!reached_cp8,r=3] ~~~ function checkpoint8
 
-execute @a[tag=racing,tag=reached_cp8,tag=!reached_cp9] ~~~ detect ~ 0 ~ concrete 8 tp @s ^ ^ ^0.5
-execute @a[tag=racing,tag=!reached_cp9,tag=reached_cp8] ~~~ detect ~ 0 ~ concrete 8 function checkpoint9
+execute @e[tag=cp9,type=cleverlike:checkpoint] ~~~ execute @a[tag=racing,tag=reached_cp8,tag=!reached_cp9,r=3] ~~~ function checkpoint9
 
-execute @a[tag=racing,tag=reached_cp9,tag=!reached_cp10] ~~~ detect ~ 0 ~ concrete 9 tp @s ^ ^ ^0.5
-execute @a[tag=racing,tag=!reached_cp10,tag=reached_cp9] ~~~ detect ~ 0 ~ concrete 9 function checkpoint10
+execute @e[tag=cp10,type=cleverlike:checkpoint] ~~~ execute @a[tag=racing,tag=reached_cp9,tag=!reached_cp10,r=3] ~~~ function checkpoint10
 
-execute @a[tag=racing,tag=reached_cp10,tag=!reached_cp11] ~~~ detect ~ 0 ~ concrete 10 tp @s ^ ^ ^0.5
-execute @a[tag=racing,tag=!reached_cp11,tag=reached_cp10] ~~~ detect ~ 0 ~ concrete 10 function checkpoint11
+execute @e[tag=cp11,type=cleverlike:checkpoint] ~~~ execute @a[tag=racing,tag=reached_cp10,tag=!reached_cp11,r=3] ~~~ function checkpoint11
 
-execute @a[tag=racing,tag=reached_cp11,tag=!reached_cp12] ~~~ detect ~ 0 ~ concrete 11 tp @s ^ ^ ^0.5
-execute @a[tag=racing,tag=!reached_cp12,tag=reached_cp11] ~~~ detect ~ 0 ~ concrete 11 function checkpoint12
+execute @e[tag=cp12,type=cleverlike:checkpoint] ~~~ execute @a[tag=racing,tag=reached_cp11,tag=!reached_cp12,r=3] ~~~ function checkpoint12
 
-execute @a[tag=racing,tag=reached_cp12,tag=!reached_cp13] ~~~ detect ~ 0 ~ concrete 12 tp @s ^ ^ ^0.5
-execute @a[tag=racing,tag=!reached_cp13,tag=reached_cp12] ~~~ detect ~ 0 ~ concrete 12 function checkpoint13
+execute @e[tag=cp13,type=cleverlike:checkpoint] ~~~ execute @a[tag=racing,tag=reached_cp12,tag=!reached_cp13,r=3] ~~~ function checkpoint13
 
 ## === 플레이어별 체크포인트 시간 기록 ===
 scoreboard players add @a[tag=racing,scores={checkpoint=1},tag=!reached_cp2] cp1 5
